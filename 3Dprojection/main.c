@@ -88,8 +88,8 @@ const int FS[][4] = {
     {3, 7, -1, -1}};
 
 const int VS_SIZE = sizeof(VS) / sizeof(SpacePoint);
-const int FS_SIZE1 = 4;
-const int FS_SIZE2 = sizeof(FS) / (FS_SIZE1 * sizeof(int));
+const int FS_SIZE1 = sizeof(FS[0]) / sizeof(int);
+const int FS_SIZE2 = sizeof(FS) / sizeof(FS[0]);
 
 void frame() {
     clear();
